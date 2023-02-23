@@ -77,8 +77,8 @@ function Home() {
               </div>
               <div className='heading'>{campaign.title}</div>
               <div className='desc'>{campaign.desc}</div>
-              <div class='progress-bar'>
-                <div data-size='10%' class='progress'></div>
+              <div className='progress-bar'>
+                <div data-size='10%' className='progress'></div>
               </div>
             </div>
           </div>
