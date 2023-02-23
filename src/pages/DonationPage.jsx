@@ -1,6 +1,6 @@
 import React from "react";
-import DonationRadio from "./DonationRadio";
-import DonationTextBox from "./DonationTextBox";
+import DonationRadio from "../components/DonationRadio";
+import DonationTextBox from "../components/DonationTextBox";
 import { useState } from "react";
 
 const DonationPage = () => {

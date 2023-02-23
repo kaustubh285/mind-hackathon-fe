@@ -4,11 +4,12 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DonationPage from "./Donation/DonationPage";
+
 
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
+import DonationPage from "./pages/DonationPage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
