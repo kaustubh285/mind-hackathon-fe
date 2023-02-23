@@ -1,0 +1,60 @@
+.page {
+}
+
+.campaigns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.campaign-box {
+  margin: 10px;
+  width: 300px;
+  height: 450px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 35px 35px 5px 5px;
+  overflow: hidden;
+}
+.campaign-desc {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.date-type {
+  margin-top: 10px;
+  font-size: small;
+}
+.heading {
+  font-weight: 700;
+  font-size: larger;
+}
+
+.desc {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  margin-top: 15px;
+  background-color: #fefefe;
+  border: 1px solid gray;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+  height: 30px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.progress {
+  background: #ad5389;
+  background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);
+  background: linear-gradient(to bottom, #3c1053, #ad5389);
+  border-radius: 3px;
+  height: 30px;
+  width: 50%;
+  transition: width 0.5s ease-in;
+}
