@@ -4,9 +4,8 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate, useNavigation } from "react-router-dom";
+import "../assets/navbar.css";
 
 function useForceUpdate() {
   const [value, setValue] = React.useState(0); // integer state
@@ -44,15 +43,6 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position='static' color='secondary'>
         <Toolbar>
-          <IconButton
-            size='large'
-            edge='start'
-            color='primary'
-            aria-label='menu'
-            sx={{ mr: 2 }}>
-            <MenuIcon />
-          </IconButton>
-          <Button onClick={() => navigate("/checkout")}>Checkout</Button>
           <Button onClick={() => navigate("/home")}>Home</Button>
           <Button onClick={() => navigate("/profile")}>Profile</Button>
 
@@ -61,15 +51,15 @@ export default function ButtonAppBar() {
             color={"primary"}
             component='div'
             sx={{ flexGrow: 1 }}>
-            Mind
           </Typography>
+            <img className='mindLogo' src='http://icons.duckduckgo.com/ip2/www.mind.org.uk.ico'></img>
           <Typography
             variant='h6'
             color={"primary"}
             component='div'
             sx={{ flexGrow: 1 }}>
-            Mind
           </Typography>
+          <Button onClick={() => navigate("/checkout")}>Checkout</Button>
 
           <Button
             color='primary'
