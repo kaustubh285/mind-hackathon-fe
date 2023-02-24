@@ -4,6 +4,7 @@ import "../assets/profile.css";
 function ProfilePage() {
   const [userDetails, setUserDetails] = useState({});
   const [donationHistory, setDonationHistory] = useState([]);
+  const [savedCards, setPaymentInformation] = useState([]);
   useEffect(() => {
     let tempUserDetails = {
       img: "https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png",
@@ -37,15 +38,22 @@ function ProfilePage() {
       },
     ];
 
+    let savedCards=[
+      {
+        cardNumber: "**** **** **** 1234",
+      }
+    ]
+
     // todo: api call here
     setDonationHistory(tempDonationHistory);
     setUserDetails(tempUserDetails);
+    setPaymentInformation(savedCards);
   }, []);
 
   return (
     <div className='profile-container'>
+      <div className='separator'></div>
       <div className='profile-header'>
-        <img alt='user' src={userDetails.img} className='profile-img' />
         <div className='profile-body'>
           <h1 className='profile-name'>{userDetails.name}</h1>
           <table className='profile-table'>
@@ -66,6 +74,7 @@ function ProfilePage() {
           </table>
         </div>
       </div>
+      <img alt='user' src={userDetails.img} className='profile-img' />
 
       <div className='history-section'>
         <h3>{userDetails.name}'s Donation History</h3>
@@ -78,6 +87,19 @@ function ProfilePage() {
           </tr>
         ))}
       </table>
+      <div className="payment-information">
+        <h3>Payment Information</h3>
+        <h4>Saved Cards</h4>
+        {savedCards.map(({ cardNumber }) => (
+          <tr>
+            <th>{cardNumber}</th><button>Delete</button>
+          </tr>
+        ))}
+      </div>
+      <div className="delete-account">
+        <h3>Delete Account</h3>
+        <button className="delete-button">Delete</button>
+      </div>
     </div>
   );
 }
