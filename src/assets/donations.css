@@ -1,113 +1,126 @@
-.MindBlue {color: #1300C1;}
-.MindWhite {color: #FFFFFF;}
-.MindPeach {color: #FFCDD9;}
-.MindSky {color: #9DA8FF;}
-.MindGreen {color: #71F5C4;}
-.MindPurple {color: #8149FF;}
-.MindPink {color: #FF0071;}
+.MindBlue {
+  color: #1300c1;
+}
+.MindWhite {
+  color: #ffffff;
+}
+.MindPeach {
+  color: #ffcdd9;
+}
+.MindSky {
+  color: #9da8ff;
+}
+.MindGreen {
+  color: #71f5c4;
+}
+.MindPurple {
+  color: #8149ff;
+}
+.MindPink {
+  color: #ff0071;
+}
 
-.textboxContainer{
-    margin: 20px;
+.textboxContainer {
+  margin: 20px;
 }
 
 .DonationRadioGroupsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .value {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 5px 20px 5px 40px;
-    border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px 5px 40px;
+  border-radius: 20px;
 }
 
 .value:hover {
-    background: #71F5C4;
+  background: #71f5c4;
 }
 .value::before {
-    content: "";
-    position: absolute;
-    left: 15px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #8149FF;
-    outline: 0px solid #71F5C4;
-    transition: 0.4s;
+  content: "";
+  position: absolute;
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #8149ff;
+  outline: 0px solid #71f5c4;
+  transition: 0.4s;
 }
 .value_checked {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 5px 20px 5px 40px;
-    border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px 5px 40px;
+  border-radius: 20px;
 }
-
 
 .value_checked:hover {
-    background: #71F5C4;
+  background: #71f5c4;
 }
 
 .value_checked {
-    color: #71F5C4;
-    border-width: 5px;
-    background: #8149FF;
-    transition: 0.5s;
+  color: #71f5c4;
+  border-width: 5px;
+  background: #8149ff;
+  transition: 0.5s;
 }
-.value_checked::before{
-    content: "";
-    position: absolute;
-    left: 15px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    outline: 0px solid #71F5C4;
-    transition: 0.4s;
+.value_checked::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  outline: 0px solid #71f5c4;
+  transition: 0.4s;
 }
 button {
-    padding: 10px 24px;
-    border: 2px solid #FF0071;
-    border-radius: 4px;
-    transition-duration: 0.5s;
-    float: center;
+  padding: 10px 24px;
+  border: 2px solid #ff0071;
+  border-radius: 4px;
+  transition-duration: 0.5s;
+  float: center;
 }
 button:hover {
-    background-color: #FF0071;
-    color: #FFFFFF;
-    cursor: pointer;
+  background-color: #ff0071;
+  color: #ffffff;
+  cursor: pointer;
 }
 button:focus {
-    background-color: #8149FF;
-    color: #FFFFFF;
-    padding: 10px 24px;
-    border: 2px solid #8149FF;
-    border-radius: 4px;
+  background-color: #8149ff;
+  color: #ffffff;
+  padding: 10px 24px;
+  border: 2px solid #8149ff;
+  border-radius: 4px;
 }
 
 .ltrContainer {
-    display: flex;
-    flex-direction: ltr;
-    align-items: center;
-
+  display: flex;
+  flex-direction: ltr;
+  align-items: center;
 }
 
 .DonationRadioGroups {
-    display: flex;
-    flex-direction: ltr;
-    padding: 50px;
-    align-items: center;
+  display: flex;
+  flex-direction: ltr;
+  padding: 50px;
+  padding-top: 30px;
+  align-items: center;
 }
 
 .DonationPanel {
-    position: relative;
-    display: flex;
-    align-items: center;
-    padding: 5px 20px 5px 40px;
-    border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px 5px 40px;
+  border-radius: 20px;
 }
 
 .campaigns {
@@ -165,5 +178,3 @@ button:focus {
   width: 50%;
   transition: width 0.5s ease-in;
 }
-
-

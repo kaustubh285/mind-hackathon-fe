@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../assets/checkout.css";
 function CheckoutComponent() {
+  const [camps, setCamps] = useState([]);
+  useEffect(() => {
+    let camps = JSON.parse(localStorage.getItem("camps"));
+    let price = JSON.parse(localStorage.getItem("price"));
+    let frequency = JSON.parse(localStorage.getItem("frequency"));
+
+    console.log(camps, price, frequency);
+  }, []);
+
   return (
     <>
       <div className='row'>
@@ -103,22 +112,15 @@ function CheckoutComponent() {
               </div>
             </h4>
             <div>
-              <a href='#'>Product 1</a> <div className='price'>$15</div>
+              <a href='#'>Mental Health Campaign</a>{" "}
+              <div className='price'>£15</div>
             </div>
-            <div>
-              <a href='#'>Product 2</a> <div className='price'>$5</div>
-            </div>
-            <div>
-              <a href='#'>Product 3</a> <div className='price'>$8</div>
-            </div>
-            <div>
-              <a href='#'>Product 4</a> <div className='price'>$2</div>
-            </div>
+
             <hr />
             <div>
               Total{" "}
               <div className='price' style={{ color: "black" }}>
-                <b>$30</b>
+                <b>£15</b>
               </div>
             </div>
           </div>
