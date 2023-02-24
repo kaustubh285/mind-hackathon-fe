@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import "../assets/home.css";
+import DonationPage from "./DonationPage";
 
 function useForceUpdate() {
   const [value, setValue] = useState(0); // integer state
@@ -93,47 +94,53 @@ function Home() {
     if (tempList.includes(id)) tempList = removeItemOnce(tempList, id);
     else tempList.push(id);
     setDonationList(tempList);
+    localStorage.setItem("camps", JSON.stringify(tempList));
     forceUpdate();
   };
 
-  useEffect(() => {
-    console.log(donationList);
-  }, [donationList]);
-
   return (
-    <div className='page'>
-      <div className='campaigns'>
-        {campaignsList.map((campaign) => (
-          <div className='campaign-box'>
-            <img
-              className='campaign-img'
-              src={campaign.img}
-              alt='campaign-img'
-            />
-            <div className='campaign-desc'>
-              <div style={{ minHeight: "200px" }}>
-                <div className='date-type'>
-                  {campaign.date} {campaign.type}
-                </div>
-                <div className='heading'>{campaign.title}</div>
-                <div className='desc'>{campaign.desc}</div>
-                {/* <div className='progress-bar'>
+    <div style={{ padding: "15px", paddingRight: "0px" }}>
+      <h2>Our Campaigns</h2>
+
+      <div className='page' style={{ width: "100vw", overflow: "hidden" }}>
+        <div className='campaigns'>
+          {campaignsList.map((campaign) => (
+            <div className='campaign-box'>
+              <img
+                className='campaign-img'
+                src={campaign.img}
+                alt='campaign-img'
+              />
+              <div className='campaign-desc'>
+                <div style={{ minHeight: "220px" }}>
+                  <div className='date-type'>
+                    {campaign.date} {campaign.type}
+                  </div>
+                  <div className='heading'>{campaign.title}</div>
+                  <div className='desc'>{campaign.desc}</div>
+                  {/* <div className='progress-bar'>
                 <div data-size='10%' className='progress'></div>
               </div> */}
-              </div>
+                </div>
 
-              <Button
-                style={{ marginTop: "15px" }}
-                variant={
-                  donationList.includes(campaign.id) ? "contained" : "outlined"
-                }
-                className='donate-button'
-                onClick={() => addCampaignToList(campaign.id)}>
-                {donationList.includes(campaign.id) ? "Remove" : "Donate"}
-              </Button>
+                <Button
+                  style={{ marginTop: "15px" }}
+                  variant={
+                    donationList.includes(campaign.id)
+                      ? "contained"
+                      : "outlined"
+                  }
+                  className='donate-button'
+                  onClick={() => addCampaignToList(campaign.id)}>
+                  {donationList.includes(campaign.id) ? "Remove" : "Donate"}
+                </Button>
+              </div>
             </div>
+          ))}
+          <div style={{ width: "100vw" }}>
+            <DonationPage />
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
