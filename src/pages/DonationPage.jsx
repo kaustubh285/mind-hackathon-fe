@@ -2,8 +2,10 @@ import React from "react";
 import DonationRadio from "../components/DonationRadio";
 import DonationTextBox from "../components/DonationTextBox";
 import { useState } from "react";
+import "../assets/donations.css";
 
 const DonationPage = () => {
+
     const priceOptions = [
         {text: "£1", value: 1},
         {text: "£5", value: 5},
@@ -33,6 +35,11 @@ const DonationPage = () => {
         setText(newText);
     }
 
+    const onSelectPrice = (price) => {
+        setSelectedPrice(price)
+        setText("");
+    }
+
     const onSubmit = () => {
         let price;
         if (selectedPrice !== null) {
@@ -46,20 +53,24 @@ const DonationPage = () => {
     }
 
     return (
-        <div classname="DonationRadioGroupsContainer">
-            <DonationRadio
-                options={priceOptions} 
-                setSelectedOption={setSelectedPrice} 
-                selectedOption={selectedPrice} 
-            />
+        <div class="DonationRadioGroupsContainer">
+            <div class="ltrContainer">
+                <DonationRadio
+                    options={priceOptions} 
+                    setSelectedOption={onSelectPrice}
+                    selectedOption={selectedPrice} 
+                />
+                <label class={text === "" ? "value" : "value_checked" }>Custom Amount</label>
+                <DonationTextBox
+                    text={text}
+                    onTextChange={onTextChange}
+                />
+
+            </div>
             <DonationRadio 
                 options={frequencyOptions}
                 setSelectedOption={setSelectedFrequency}
                 selectedOption={selectedFrequency}
-            />
-            <DonationTextBox
-                text={text}
-                onTextChange={onTextChange}
             />
             <button onClick={onSubmit}>Submit</button>
         </div>

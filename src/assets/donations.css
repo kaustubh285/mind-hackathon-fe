@@ -1,14 +1,169 @@
-.DonationRadioGroups {
-    display: flex;
-    flex-direction: ltr;
-    background-color: lightgrey;
-    width: 300px;
-    border: 15px solid green;
-    padding: 50px;
+.MindBlue {color: #1300C1;}
+.MindWhite {color: #FFFFFF;}
+.MindPeach {color: #FFCDD9;}
+.MindSky {color: #9DA8FF;}
+.MindGreen {color: #71F5C4;}
+.MindPurple {color: #8149FF;}
+.MindPink {color: #FF0071;}
+
+.textboxContainer{
     margin: 20px;
 }
 
-.DonationPanel {
-   padding:10px; 
-   background-color: yellow;
+.DonationRadioGroupsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.value {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px 5px 40px;
+    border-radius: 20px;
+}
+
+.value:hover {
+    background: #71F5C4;
+}
+.value::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #8149FF;
+    outline: 0px solid #71F5C4;
+    transition: 0.4s;
+}
+.value_checked {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px 5px 40px;
+    border-radius: 20px;
+}
+
+
+.value_checked:hover {
+    background: #71F5C4;
+}
+
+.value_checked {
+    color: #71F5C4;
+    border-width: 5px;
+    background: #8149FF;
+    transition: 0.5s;
+}
+.value_checked::before{
+    content: "";
+    position: absolute;
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    outline: 0px solid #71F5C4;
+    transition: 0.4s;
+}
+button {
+    padding: 10px 24px;
+    border: 2px solid #FF0071;
+    border-radius: 4px;
+    transition-duration: 0.5s;
+    float: center;
+}
+button:hover {
+    background-color: #FF0071;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+button:focus {
+    background-color: #8149FF;
+    color: #FFFFFF;
+    padding: 10px 24px;
+    border: 2px solid #8149FF;
+    border-radius: 4px;
+}
+
+.ltrContainer {
+    display: flex;
+    flex-direction: ltr;
+    align-items: center;
+
+}
+
+.DonationRadioGroups {
+    display: flex;
+    flex-direction: ltr;
+    padding: 50px;
+    align-items: center;
+}
+
+.DonationPanel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px 5px 40px;
+    border-radius: 20px;
+}
+
+.campaigns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.campaign-box {
+  margin: 10px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 35px 35px 5px 5px;
+  overflow: hidden;
+}
+.campaign-desc {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.date-type {
+  margin-top: 10px;
+  font-size: small;
+}
+.heading {
+  font-weight: 700;
+  font-size: larger;
+}
+
+.desc {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  margin-top: 15px;
+  background-color: #fefefe;
+  border: 1px solid gray;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+  height: 30px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.progress {
+  background: #ad5389;
+  background: -webkit-linear-gradient(to bottom, #3c1053, #ad5389);
+  background: linear-gradient(to bottom, #3c1053, #ad5389);
+  border-radius: 3px;
+  height: 30px;
+  width: 50%;
+  transition: width 0.5s ease-in;
+}
+
+

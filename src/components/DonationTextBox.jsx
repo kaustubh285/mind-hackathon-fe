@@ -10,7 +10,9 @@ const DonationTextBox = ({text, onTextChange}) => {
     } 
 
     return (
-        <input value={text} onChange={onChange}/>
+        <div class="textboxContainer">
+            <input value={text} onChange={onChange}/>
+        </div>
     )
 }
 
