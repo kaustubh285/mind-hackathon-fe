@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import DonationPage from "./pages/DonationPage";
 import Admin from "./pages/Admin";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Checkout from "./pages/Checkout";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -40,6 +41,7 @@ root.render(
             <Route path='/login' element={<Login />} />
             <Route path='/profile' element={<Profile />} />
             <Route path='/admin' element={<Admin />} />
+            <Route path='/checkout' element={<Checkout />} />
           </Routes>
         </div>
       </BrowserRouter>

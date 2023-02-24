@@ -1,6 +1,7 @@
 .login-page {
   display: flex;
   width: 100%;
+  height: 100vh;
   justify-content: space-between;
   align-items: center;
 }
@@ -24,6 +25,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #ffcdd9;
+  /* color: #fff !important; */
 }
 
 .login-box > .input-box {
@@ -35,7 +38,7 @@
   padding-bottom: 20px;
   margin-top: 20px;
   color: white;
-  box-shadow: 5px 5px 100px 20px #8149ff;
+  box-shadow: 5px 5px 100px 20px #ffcdd9;
   /* background-color: #8149ff; */
   border-radius: 20px;
   display: flex;
