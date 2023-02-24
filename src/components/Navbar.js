@@ -54,6 +54,7 @@ export default function ButtonAppBar() {
           </IconButton>
           <Button onClick={() => navigate("/checkout")}>Checkout</Button>
           <Button onClick={() => navigate("/home")}>Home</Button>
+          <Button onClick={() => navigate("/profile")}>Profile</Button>
 
           <Typography
             variant='h6'
