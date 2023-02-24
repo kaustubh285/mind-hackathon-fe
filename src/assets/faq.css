@@ -1,0 +1,52 @@
+.MindBlue {
+  color: #1300c1;
+}
+.MindWhite {
+  color: #ffffff;
+}
+.MindPeach {
+  color: #ffcdd9;
+}
+.MindSky {
+  color: #9da8ff;
+}
+.MindGreen {
+  color: #71f5c4;
+}
+.MindPurple {
+  color: #8149ff;
+}
+.MindPink {
+  color: #ff0071;
+}
+hr.solid {
+  border-top: 3px solid #8149ff;
+}
+h1 {
+  text-align: left;
+  color: #ffffff;
+  font-size: 15px;
+}
+body {
+  font-family: "MindMeridian-Regular", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+button {
+  padding: 10px 24px;
+  border: 2px solid #ff0071;
+  border-radius: 4px;
+  transition-duration: 0.5s;
+  float: center;
+}
+button:hover {
+  background-color: #ff0071;
+  color: #ffffff;
+  cursor: pointer;
+}
+button:focus {
+  background-color: #8149ff;
+  color: #ffffff;
+  padding: 10px 24px;
+  border: 2px solid #8149ff;
+  border-radius: 4px;
+}

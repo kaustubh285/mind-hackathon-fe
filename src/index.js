@@ -13,6 +13,7 @@ import DonationPage from "./pages/DonationPage";
 import Admin from "./pages/Admin";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Checkout from "./pages/Checkout";
+import FAQ from "./pages/FAQ";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -37,6 +38,7 @@ root.render(
           <Routes>
             <Route path='/' element={<App />} />
             <Route path='/donation' element={<DonationPage />} />
+            <Route path='/FAQ' element={<FAQ />} />
             <Route path='/home' element={<Home />} />
             <Route path='/login' element={<Login />} />
             <Route path='/profile' element={<Profile />} />
