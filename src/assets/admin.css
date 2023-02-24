@@ -1,0 +1,8 @@
+.admin-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.campaigns-table {
+  width: 75%;
+}

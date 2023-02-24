@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Input } from "@mui/material";
+import { Button } from "@mui/material";
 
 function LoginSection() {
   const [email, setEmail] = useState("");
@@ -13,25 +15,38 @@ function LoginSection() {
   };
   return (
     <div className='login-section'>
-      <h2>Login</h2>
+      <h1>Login</h1>
       <form className='login-box'>
         <div className='input-box'>
           <h4>Email</h4>
-          <input
+          <Input
+            value={email}
+            color='secondary'
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          {/* <input
             type={"text"}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-          />
+          /> */}
         </div>
         <div className='input-box'>
           <h4>Password</h4>
-          <input
+          <Input
+            color='secondary'
+            value={password}
+            type={"password"}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          {/* <input
             type={"text"}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-          />
+          /> */}
         </div>
-        <button onClick={authenticate}>Login</button>
+        <Button variant='outlined' color='secondary' onClick={authenticate}>
+          Login
+        </Button>
       </form>
     </div>
   );

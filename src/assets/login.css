@@ -8,8 +8,9 @@
 .login-section {
   height: 100vh;
   width: 100%;
-  background-color: antiquewhite;
-  border-right: 1px solid black;
+  color: white;
+  background-color: #9da8ff;
+  /* border-right: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,19 +26,33 @@
   flex-direction: column;
 }
 
+.login-box > .input-box {
+  margin-top: 10px;
+}
+
 .login-box {
-  border: 1px solid black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  color: white;
+  box-shadow: 5px 5px 100px 20px #8149ff;
+  /* background-color: #8149ff; */
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 50%;
-  height: 20%;
+  height: 25%;
+  /* border: 1px solid #8149ff; */
 }
 
 .signup-box {
-  border: 1px solid black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  color: #8149ff;
+  box-shadow: 5px 5px 100px 20px #9da8ff;
   border-radius: 20px;
   display: flex;
   flex-direction: column;

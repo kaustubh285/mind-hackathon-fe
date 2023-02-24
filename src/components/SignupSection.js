@@ -1,3 +1,4 @@
+import { Button, Input } from "@mui/material";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -35,11 +36,13 @@ function SignupSection() {
 
   return (
     <div className='signup-section'>
-      <h2 className='signup-heading'>Join us</h2>
+      <h1 className='signup-heading' style={{ color: "#8149ff" }}>
+        Join us
+      </h1>
       <form className='signup-box'>
         <div className='input-box'>
           <h4>Name</h4>
-          <input
+          <Input
             type={"text"}
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -47,7 +50,7 @@ function SignupSection() {
         </div>
         <div className='input-box'>
           <h4>Email</h4>
-          <input
+          <Input
             type={"text"}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -55,7 +58,7 @@ function SignupSection() {
         </div>
         <div className='input-box'>
           <h4>Age</h4>
-          <input
+          <Input
             type={"number"}
             value={age}
             onChange={(e) => setAge(e.target.value)}
@@ -63,21 +66,23 @@ function SignupSection() {
         </div>
         <div className='input-box'>
           <h4>Password</h4>
-          <input
+          <Input
             type={"password"}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <div className='input-box'>
-          <h4>Password</h4>
-          <input
+          <h4>Confirm Password</h4>
+          <Input
             type={"password"}
             value={confPassword}
             onChange={(e) => setConfPassword(e.target.value)}
           />
         </div>
-        <button onClick={authenticate}>Sign up</button>
+        <Button variant='contained' onClick={authenticate}>
+          Sign up
+        </Button>
       </form>
     </div>
   );
