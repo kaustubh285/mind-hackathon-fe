@@ -52,8 +52,8 @@ function ProfilePage() {
 
   return (
     <div className='profile-container'>
+      <div className='separator'></div>
       <div className='profile-header'>
-        <img alt='user' src={userDetails.img} className='profile-img' />
         <div className='profile-body'>
           <h1 className='profile-name'>{userDetails.name}</h1>
           <table className='profile-table'>
@@ -74,6 +74,7 @@ function ProfilePage() {
           </table>
         </div>
       </div>
+      <img alt='user' src={userDetails.img} className='profile-img' />
 
       <div className='history-section'>
         <h3>{userDetails.name}'s Donation History</h3>

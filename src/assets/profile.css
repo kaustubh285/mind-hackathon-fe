@@ -9,12 +9,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 30%;
+  width: 100%;
   padding: 10px 20px;
 }
 .profile-img {
-  max-width: 20%;
+  max-width: 10%;
   max-height: 20%;
+  float: left;
 }
 .profile-name {
   margin: 0;
@@ -50,4 +51,10 @@
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.separator{
+  height:30%;
+  width:100%;
+  background-image: linear-gradient(to right, #ffffff, #ff0000, #ffffff);
 }
