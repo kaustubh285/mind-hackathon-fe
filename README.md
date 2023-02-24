@@ -2,6 +2,7 @@ Contributors to the project :
 Abinash N Ramesh
 Ricky Chu
 Avery Q. Calvin
+Meera Jose
 Kaustubh Deshpande
 
 In the project directory, you can run:
