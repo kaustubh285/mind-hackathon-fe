@@ -19,57 +19,48 @@ function Home() {
     let listOfCampaigns = [
       {
         id: "123",
-        img: "https://images.squarespace-cdn.com/content/v1/5dc41f88c25b0b210020f722/1677061294280-NP9Y497ODS71YMJ9G44V/haire-feature.jpg?format=750w",
+        img: "https://www.mind.org.uk/media/8881/three-people-facing-away-with-arms-round-each-other.jpg?format=webp&quality=70",
         date: "22 Feb 2023",
         type: "project campaign",
-        title: "Healthy toolkit campaign",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crastincidunt, nulla sed varius blandit, felis massa pellentesqueenim, quis tristique lorem mauris eget mauris.",
+        title: "General",
+        desc: "All donations for will be used for the development of our services to provide better outreach and help to communities",
         progress: "80%",
       },
 
       {
         id: "923",
-        img: "https://images.squarespace-cdn.com/content/v1/5dc41f88c25b0b210020f722/1677061294280-NP9Y497ODS71YMJ9G44V/haire-feature.jpg?format=750w",
-        date: "22 Feb 2023",
+        img: "https://www.mind.org.uk/media/8738/person-smiling-at-camera-blue-jacket.jpg?center=0.46835443037974683,0.44915254237288138&mode=crop&width=767&height=384&rnd=132841222522930000&format=webp&quality=80",
+        date: "20 Jan 2023",
         type: "project campaign",
-        title: "Healthy toolkit campaign",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crastincidunt, nulla sed varius blandit, felis massa pellentesqueenim, quis tristique lorem mauris eget mauris.",
+        title: "Mental health problems",
+        desc: "We're pushing for fundamental reforms to the outdated Mental Health Act and campaigning for those of us with a mental health problem to get the best care possible.",
         progress: "80%",
       },
       {
         id: "23",
-        img: "https://images.squarespace-cdn.com/content/v1/5dc41f88c25b0b210020f722/1677061294280-NP9Y497ODS71YMJ9G44V/haire-feature.jpg?format=750w",
-        date: "22 Feb 2023",
+        img: "https://www.mind.org.uk/media/8778/three-people-walking-and-laughing-2.jpg?anchor=center&mode=crop&width=767&height=384&rnd=132841222537800000&format=webp&quality=80",
+        date: "08 Feb 2023",
         type: "project campaign",
-        title: "Healthy toolkit campaign",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crastincidunt, nulla sed varius blandit, felis massa pellentesqueenim, quis tristique lorem mauris eget mauris.",
+        title: "Children and Young",
+        desc: "We're campaigning for everyone aged 11-25 to get proper support for their mental health by pushing for the Government to #FundTheHubs.",
         progress: "80%",
       },
       {
         id: "423",
-        img: "https://images.squarespace-cdn.com/content/v1/5dc41f88c25b0b210020f722/1677061294280-NP9Y497ODS71YMJ9G44V/haire-feature.jpg?format=750w",
-        date: "22 Feb 2023",
+        img: "https://www.mind.org.uk/media/8671/person-wearing-headphones.jpg?anchor=center&mode=crop&width=767&height=384&rnd=132841222504970000&format=webp&quality=80",
+        date: "16 Jan 2023",
         type: "project campaign",
-        title: "Healthy toolkit campaign",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crastincidunt, nulla sed varius blandit, felis massa pellentesqueenim, quis tristique lorem mauris eget mauris.",
+        title: "Poverty",
+        desc: "We're pushing the Government to change the benefits system and give those of us living with a mental health problem a real living income if we are unable to work.",
         progress: "80%",
       },
       {
         id: "523",
-        img: "https://images.squarespace-cdn.com/content/v1/5dc41f88c25b0b210020f722/1677061294280-NP9Y497ODS71YMJ9G44V/haire-feature.jpg?format=750w",
-        date: "22 Feb 2023",
+        img: "https://www.mind.org.uk/media/8707/person-speaking-on-the-phone.jpg?crop=0,0.277982905982906,0,0.38889102842688239&cropmode=percentage&width=767&height=384&rnd=132841222510400000&format=webp&quality=80",
+        date: "02 Nov 2022",
         type: "project campaign",
-        title: "Healthy toolkit campaign",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crastincidunt, nulla sed varius blandit, felis massa pellentesqueenim, quis tristique lorem mauris eget mauris.",
-        progress: "80%",
-      },
-      {
-        id: "623",
-        img: "https://images.squarespace-cdn.com/content/v1/5dc41f88c25b0b210020f722/1677061294280-NP9Y497ODS71YMJ9G44V/haire-feature.jpg?format=750w",
-        date: "22 Feb 2023",
-        type: "project campaign",
-        title: "Healthy toolkit campaign",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Crastincidunt, nulla sed varius blandit, felis massa pellentesqueenim, quis tristique lorem mauris eget mauris.",
+        title: "Racialised communities",
+        desc: "The mental health system is stacked against those of us who are members of racialised communities. We want to change the discriminatory Mental Health Act and improve support for these communities.",
         progress: "80%",
       },
     ];
@@ -120,14 +111,16 @@ function Home() {
               alt='campaign-img'
             />
             <div className='campaign-desc'>
-              <div className='date-type'>
-                {campaign.date} {campaign.type}
-              </div>
-              <div className='heading'>{campaign.title}</div>
-              <div className='desc'>{campaign.desc}</div>
-              {/* <div className='progress-bar'>
+              <div style={{ minHeight: "200px" }}>
+                <div className='date-type'>
+                  {campaign.date} {campaign.type}
+                </div>
+                <div className='heading'>{campaign.title}</div>
+                <div className='desc'>{campaign.desc}</div>
+                {/* <div className='progress-bar'>
                 <div data-size='10%' className='progress'></div>
               </div> */}
+              </div>
 
               <Button
                 style={{ marginTop: "15px" }}

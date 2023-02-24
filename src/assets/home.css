@@ -30,6 +30,9 @@
   color: #8149ff;
 }
 
+.campaign-img {
+  max-height: 150px;
+}
 .campaign-box:hover {
   box-shadow: 0px 7px 10px 2px #9da8ff;
 }
