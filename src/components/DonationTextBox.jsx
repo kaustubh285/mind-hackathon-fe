@@ -11,7 +11,7 @@ const DonationTextBox = ({ text, onTextChange }) => {
 
   return (
     <div class='textboxContainer'>
-      <input value={text} onChange={onChange} />
+      <input value={text} style={{ fontSize: "x-large" }} onChange={onChange} />
     </div>
   );
 };

@@ -38,11 +38,11 @@ function ProfilePage() {
       },
     ];
 
-    let savedCards=[
+    let savedCards = [
       {
         cardNumber: "**** **** **** 1234",
-      }
-    ]
+      },
+    ];
 
     // todo: api call here
     setDonationHistory(tempDonationHistory);
@@ -83,7 +83,7 @@ function ProfilePage() {
       </div>
       <table>
         {donationHistory.map(({ name, amount }) => (
-          <div class="donationContainer">
+          <div class='donationContainer'>
             <tr>
               <th>{name}</th>
               <th>{amount}</th>
@@ -91,18 +91,16 @@ function ProfilePage() {
           </div>
         ))}
       </table>
-      <div className="payment-information">
-        <h3>Payment Information</h3>
-        <h4>Saved Cards</h4>
-        {savedCards.map(({ cardNumber }) => (
-          <tr>
-            <th>{cardNumber}</th><button>Delete</button>
-          </tr>
-        ))}
-      </div>
-      <div className="delete-account">
+
+      <div
+        className='delete-account'
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+        }}>
         <h3>Delete Account</h3>
-        <button className="delete-button">Delete</button>
+        <button className='delete-button'>Delete</button>
       </div>
     </div>
   );

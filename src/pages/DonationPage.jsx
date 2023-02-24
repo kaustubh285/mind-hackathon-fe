@@ -64,7 +64,9 @@ const DonationPage = () => {
           setSelectedOption={onSelectPrice}
           selectedOption={selectedPrice}
         />
-        <label class={text === "" ? "value" : "value_checked"}>
+        <label
+          style={{ fontSize: "x-large" }}
+          class={text === "" ? "value" : "value_checked"}>
           Custom Amount
         </label>
         <DonationTextBox text={text} onTextChange={onTextChange} />
