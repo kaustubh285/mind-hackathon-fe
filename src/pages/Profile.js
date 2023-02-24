@@ -17,24 +17,24 @@ function ProfilePage() {
 
     let tempDonationHistory = [
       {
-        name: "xyz campaign",
-        amount: "5£",
+        name: "1st Campaign",
+        amount: "£5",
       },
       {
-        name: "abc campaign",
-        amount: "9£",
+        name: "2nd Campaign",
+        amount: "£9",
       },
       {
-        name: "jkl campaign",
-        amount: "4£",
+        name: "Jkl Campaign",
+        amount: "£4",
       },
       {
-        name: "qwerty campaign",
-        amount: "7£",
+        name: "Qwerty Campaign",
+        amount: "£7",
       },
       {
-        name: "wasd campaign",
-        amount: "10£",
+        name: "Wasd Campaign",
+        amount: "£10",
       },
     ];
 
@@ -54,6 +54,8 @@ function ProfilePage() {
     <div className='profile-container'>
       <div className='separator'></div>
       <div className='profile-header'>
+        <div></div>
+        <img alt='user' src={userDetails.img} className='profile-img' />
         <div className='profile-body'>
           <h1 className='profile-name'>{userDetails.name}</h1>
           <table className='profile-table'>
@@ -73,18 +75,20 @@ function ProfilePage() {
             </tr>
           </table>
         </div>
+        <div></div>
       </div>
-      <img alt='user' src={userDetails.img} className='profile-img' />
 
       <div className='history-section'>
         <h3>{userDetails.name}'s Donation History</h3>
       </div>
       <table>
         {donationHistory.map(({ name, amount }) => (
-          <tr>
-            <th>{name}</th>
-            <th>{amount}</th>
-          </tr>
+          <div class="donationContainer">
+            <tr>
+              <th>{name}</th>
+              <th>{amount}</th>
+            </tr>
+          </div>
         ))}
       </table>
       <div className="payment-information">

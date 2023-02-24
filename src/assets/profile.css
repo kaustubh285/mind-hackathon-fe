@@ -1,3 +1,19 @@
+body {
+    background-color: #FFCDD9;
+    color: #1300c1;
+}
+
+.donationContainer {
+    padding:15px;
+    font-size: 20px;
+}
+
+.profile-container-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .profile-container {
   display: flex;
   flex-direction: column;
@@ -7,10 +23,10 @@
 .profile-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 10px 20px;
+  justify-content: center;
 }
 .profile-img {
   max-width: 10%;
